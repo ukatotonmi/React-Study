@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import UserList from './Tododel';
-import CreateUser from './Todoadd';
+import Tododel from './Tododel';
+import Todoadd from './Todoadd';
 
 function App() {
   const [inputs, setInputs] = useState({
@@ -58,12 +58,12 @@ function App() {
   };
   return (
     <>
-      <CreateUser
+      <Todoadd
         todolist={todolist}
         onChange={onChange}
         onCreate={onCreate}
       />
-      <UserList todos={todos} onRemove={onRemove} onToggle={onToggle}/>
+      <Tododel todos={todos} onRemove={onRemove} onToggle={onToggle}/>
     </>
   );
 }
